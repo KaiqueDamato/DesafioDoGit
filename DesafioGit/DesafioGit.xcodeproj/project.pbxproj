@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E9FD05B1AF0FD3E00C7862A /* RepositoriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9FD05A1AF0FD3E00C7862A /* RepositoriesManager.swift */; };
+		3E9FD05F1AF0FE0E00C7862A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9FD05E1AF0FE0E00C7862A /* Repository.swift */; };
+		3E9FD0631AF0FE4100C7862A /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9FD0621AF0FE4100C7862A /* Label.swift */; };
+		3E9FD0651AF0FE9800C7862A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9FD0641AF0FE9800C7862A /* User.swift */; };
+		3E9FD0671AF0FF8C00C7862A /* UsersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9FD0661AF0FF8C00C7862A /* UsersManager.swift */; };
+		3E9FD0691AF0FF9700C7862A /* LabelsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9FD0681AF0FF9700C7862A /* LabelsManager.swift */; };
+		3E9FD06B1AF102A400C7862A /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9FD06A1AF102A400C7862A /* UserTableViewController.swift */; };
+		3E9FD06D1AF105D500C7862A /* RepositoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9FD06C1AF105D500C7862A /* RepositoryTableViewController.swift */; };
+		3E9FD06F1AF106D800C7862A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9FD06E1AF106D800C7862A /* DetailViewController.swift */; };
 		EC9D6BC31AEFA8A800B6250D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6BC21AEFA8A800B6250D /* AppDelegate.swift */; };
 		EC9D6BC61AEFA8A800B6250D /* DesafioGit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6BC41AEFA8A800B6250D /* DesafioGit.xcdatamodeld */; };
-		EC9D6BC81AEFA8A800B6250D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D6BC71AEFA8A800B6250D /* ViewController.swift */; };
 		EC9D6BCB1AEFA8A800B6250D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9D6BC91AEFA8A800B6250D /* Main.storyboard */; };
 		EC9D6BCD1AEFA8A800B6250D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9D6BCC1AEFA8A800B6250D /* Images.xcassets */; };
 		EC9D6BD01AEFA8A800B6250D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC9D6BCE1AEFA8A800B6250D /* LaunchScreen.xib */; };
@@ -27,11 +35,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E9FD05A1AF0FD3E00C7862A /* RepositoriesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesManager.swift; sourceTree = "<group>"; };
+		3E9FD05E1AF0FE0E00C7862A /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		3E9FD0621AF0FE4100C7862A /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		3E9FD0641AF0FE9800C7862A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3E9FD0661AF0FF8C00C7862A /* UsersManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersManager.swift; sourceTree = "<group>"; };
+		3E9FD0681AF0FF9700C7862A /* LabelsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelsManager.swift; sourceTree = "<group>"; };
+		3E9FD06A1AF102A400C7862A /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
+		3E9FD06C1AF105D500C7862A /* RepositoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewController.swift; sourceTree = "<group>"; };
+		3E9FD06E1AF106D800C7862A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EC9D6BBD1AEFA8A800B6250D /* DesafioGit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioGit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9D6BC11AEFA8A800B6250D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC9D6BC21AEFA8A800B6250D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC9D6BC51AEFA8A800B6250D /* DesafioGit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DesafioGit.xcdatamodel; sourceTree = "<group>"; };
-		EC9D6BC71AEFA8A800B6250D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC9D6BCA1AEFA8A800B6250D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC9D6BCC1AEFA8A800B6250D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EC9D6BCF1AEFA8A800B6250D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -58,9 +74,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E9FD0591AF0FD2000C7862A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3E9FD0661AF0FF8C00C7862A /* UsersManager.swift */,
+				3E9FD05A1AF0FD3E00C7862A /* RepositoriesManager.swift */,
+				3E9FD0681AF0FF9700C7862A /* LabelsManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		3E9FD05D1AF0FE0000C7862A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3E9FD0641AF0FE9800C7862A /* User.swift */,
+				3E9FD05E1AF0FE0E00C7862A /* Repository.swift */,
+				3E9FD0621AF0FE4100C7862A /* Label.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 		EC9D6BB41AEFA8A800B6250D = {
 			isa = PBXGroup;
 			children = (
+				3E9FD05D1AF0FE0000C7862A /* Entities */,
+				3E9FD0591AF0FD2000C7862A /* Managers */,
 				EC9D6BBF1AEFA8A800B6250D /* DesafioGit */,
 				EC9D6BD81AEFA8A800B6250D /* DesafioGitTests */,
 				EC9D6BBE1AEFA8A800B6250D /* Products */,
@@ -80,12 +118,14 @@
 			isa = PBXGroup;
 			children = (
 				EC9D6BC21AEFA8A800B6250D /* AppDelegate.swift */,
-				EC9D6BC71AEFA8A800B6250D /* ViewController.swift */,
 				EC9D6BC91AEFA8A800B6250D /* Main.storyboard */,
 				EC9D6BCC1AEFA8A800B6250D /* Images.xcassets */,
 				EC9D6BCE1AEFA8A800B6250D /* LaunchScreen.xib */,
 				EC9D6BC41AEFA8A800B6250D /* DesafioGit.xcdatamodeld */,
 				EC9D6BC01AEFA8A800B6250D /* Supporting Files */,
+				3E9FD06A1AF102A400C7862A /* UserTableViewController.swift */,
+				3E9FD06C1AF105D500C7862A /* RepositoryTableViewController.swift */,
+				3E9FD06E1AF106D800C7862A /* DetailViewController.swift */,
 			);
 			path = DesafioGit;
 			sourceTree = "<group>";
@@ -215,9 +255,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC9D6BC81AEFA8A800B6250D /* ViewController.swift in Sources */,
+				3E9FD06F1AF106D800C7862A /* DetailViewController.swift in Sources */,
+				3E9FD06B1AF102A400C7862A /* UserTableViewController.swift in Sources */,
 				EC9D6BC61AEFA8A800B6250D /* DesafioGit.xcdatamodeld in Sources */,
+				3E9FD0671AF0FF8C00C7862A /* UsersManager.swift in Sources */,
+				3E9FD0691AF0FF9700C7862A /* LabelsManager.swift in Sources */,
+				3E9FD0631AF0FE4100C7862A /* Label.swift in Sources */,
+				3E9FD06D1AF105D500C7862A /* RepositoryTableViewController.swift in Sources */,
+				3E9FD05F1AF0FE0E00C7862A /* Repository.swift in Sources */,
 				EC9D6BC31AEFA8A800B6250D /* AppDelegate.swift in Sources */,
+				3E9FD05B1AF0FD3E00C7862A /* RepositoriesManager.swift in Sources */,
+				3E9FD0651AF0FE9800C7862A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +463,7 @@
 				EC9D6BE11AEFA8A800B6250D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC9D6BE21AEFA8A800B6250D /* Build configuration list for PBXNativeTarget "DesafioGitTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +472,7 @@
 				EC9D6BE41AEFA8A800B6250D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

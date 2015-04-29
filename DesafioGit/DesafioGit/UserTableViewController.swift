@@ -12,6 +12,7 @@ class UserTableViewController: UITableViewController, UITableViewDataSource {
     lazy var users:Array<User> = {
         return UsersManager.sharedInstance.findUsers()
         }()
+    var gitManager = GitManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()

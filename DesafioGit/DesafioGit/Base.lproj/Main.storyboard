@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZDv-PS-493">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="suP-vR-7mH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
@@ -126,6 +126,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOi-NT-a6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="60" y="352"/>
+        </scene>
+        <!--Teste View Controller-->
+        <scene sceneID="1Gt-1S-omL">
+            <objects>
+                <viewController id="suP-vR-7mH" customClass="TesteViewController" customModule="DesafioGit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lc9-1M-kCc"/>
+                        <viewControllerLayoutGuide type="bottom" id="8YB-jv-h3Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MrC-lD-O8X">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g1Z-Kn-igg">
+                                <rect key="frame" x="208" y="285" width="185" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="Yc7-Sg-lEH"/>
+                                    <constraint firstAttribute="height" constant="30" id="ni2-s5-A9H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="secureTextEntry" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4P-9m-NXe">
+                                <rect key="frame" x="279" y="348" width="42" height="30"/>
+                                <state key="normal" title="Entrar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="teste" destination="suP-vR-7mH" eventType="touchUpInside" id="kgN-HU-HUl"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g1S-5G-dbM">
+                                <rect key="frame" x="208" y="247" width="185" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="Wl1-gC-0P6"/>
+                                    <constraint firstAttribute="height" constant="30" id="km5-Tr-qjo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="g1S-5G-dbM" secondAttribute="centerY" constant="38" id="EvY-zG-tc8"/>
+                            <constraint firstItem="g1Z-Kn-igg" firstAttribute="centerX" secondItem="i4P-9m-NXe" secondAttribute="centerX" constant="0.5" id="Gqz-Wy-dSC"/>
+                            <constraint firstAttribute="centerX" secondItem="g1S-5G-dbM" secondAttribute="centerX" constant="-0.5" id="MEK-kO-q6T"/>
+                            <constraint firstAttribute="centerX" secondItem="g1Z-Kn-igg" secondAttribute="centerX" constant="-0.5" id="h6C-zb-2Hh"/>
+                            <constraint firstAttribute="centerY" secondItem="g1Z-Kn-igg" secondAttribute="centerY" id="s8d-O5-emN"/>
+                            <constraint firstAttribute="centerY" secondItem="i4P-9m-NXe" secondAttribute="centerY" constant="-63" id="sXe-Cm-zn2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="g1Z-Kn-igg" id="lhI-dx-da2"/>
+                        <outlet property="usernameTextField" destination="g1S-5G-dbM" id="cu3-Ci-PWZ"/>
+                        <segue destination="ZDv-PS-493" kind="show" identifier="showResults" id="Luc-gi-DUI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z9Z-Ub-lIA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="1055"/>
         </scene>
     </scenes>
 </document>

@@ -33,6 +33,10 @@ class TesteViewController: UIViewController {
         gitManager.buscaGit(username, password: password) { (success) -> Void in
             if success {
                 self.performSegueWithIdentifier("showResults", sender: nil)
+            } else {
+                let alert = UIAlertController(title: "Usuário inválido", message: "Tente novamente", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
             }
         }
     }

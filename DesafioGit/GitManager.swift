@@ -15,7 +15,7 @@ public class GitManager {
     private init(){}
     
     func buscaGit(username: String, password: String, completion: (success: Bool) -> Void) {
-        var url =  request.getRequest("https://api.github.com/users/KaiqueDamato/repos", username: username, password: password)
+        var url =  request.getRequest("https://api.github.com/users/\(username)/repos", username: username, password: password)
         
         NSURLConnection.sendAsynchronousRequest(url, queue: NSOperationQueue.mainQueue()) { (response, data, error) in
             var error = NSError?()
@@ -28,9 +28,9 @@ public class GitManager {
                     let dataArr = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as! [NSDictionary]
                     completion(success: true)
                         println(dataArr)
-                } else {
-                    completion(success: false)
                 }
+            } else {
+                completion(success: false)
             }
         }
     }

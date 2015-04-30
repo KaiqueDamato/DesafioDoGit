@@ -26,11 +26,11 @@ class TesteViewController: UIViewController {
     }
     
 
-    @IBAction func teste() {
+    @IBAction func submit() {
         var username = usernameTextField.text
         var password = passwordTextField.text
         
-        gitManager.buscaGit(username, password: password) { (success) -> Void in
+        gitManager.gitSearchForRepos(username, password: password) { (success) -> Void in
             if success {
                 self.performSegueWithIdentifier("showResults", sender: nil)
             } else {

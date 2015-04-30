@@ -120,7 +120,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="teste" destination="suP-vR-7mH" eventType="touchUpInside" id="kgN-HU-HUl"/>
+                                    <action selector="submit" destination="suP-vR-7mH" eventType="touchUpInside" id="FIb-BI-a92"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g1S-5G-dbM">
@@ -146,7 +146,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="g1Z-Kn-igg" id="lhI-dx-da2"/>
                         <outlet property="usernameTextField" destination="g1S-5G-dbM" id="cu3-Ci-PWZ"/>
-                        <segue destination="ZDv-PS-493" kind="show" identifier="showResults" id="Luc-gi-DUI"/>
+                        <segue destination="ZDv-PS-493" kind="presentation" identifier="showResults" modalTransitionStyle="crossDissolve" id="Luc-gi-DUI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9Z-Ub-lIA" userLabel="First Responder" sceneMemberID="firstResponder"/>

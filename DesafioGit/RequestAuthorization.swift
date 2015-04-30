@@ -15,8 +15,7 @@ class RequestAuthorization: NSObject {
         let loginData = login.dataUsingEncoding(NSUTF8StringEncoding)
         let baseLogin = loginData!.base64EncodedStringWithOptions(nil)
         
-        let url2 = NSURL(string: url)
-        let request = NSMutableURLRequest(URL: url2!)
+        let request = NSMutableURLRequest(URL: NSURL(string: url)!)
         request.HTTPMethod = "GET"
         request.setValue("Basic \(baseLogin)", forHTTPHeaderField: "Authorization")
         return request

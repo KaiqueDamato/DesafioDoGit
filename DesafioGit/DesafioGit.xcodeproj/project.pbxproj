@@ -232,8 +232,8 @@
 				EC9D6BC41AEFA8A800B6250D /* DesafioGit.xcdatamodeld */,
 				EC9D6BC01AEFA8A800B6250D /* Supporting Files */,
 				EC8C62051AF15AE3007E4D49 /* LoginViewController.swift */,
-				3E9FD06E1AF106D800C7862A /* DetailViewController.swift */,
 				ECAFD6A51AF24CBC00C01BC9 /* RepositoryTableViewController.swift */,
+				3E9FD06E1AF106D800C7862A /* DetailViewController.swift */,
 			);
 			path = DesafioGit;
 			sourceTree = "<group>";
@@ -722,6 +722,7 @@
 				0B0329271AF5330400C875C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B0329291AF5330400C875C5 /* Build configuration list for PBXNativeTarget "DesafioGit WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -730,6 +731,7 @@
 				0B0329251AF5330400C875C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC9D6BB81AEFA8A800B6250D /* Build configuration list for PBXProject "DesafioGit" */ = {
 			isa = XCConfigurationList;

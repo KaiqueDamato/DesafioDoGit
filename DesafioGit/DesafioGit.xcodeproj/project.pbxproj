@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B0329101AF5330400C875C5 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B03290F1AF5330400C875C5 /* InterfaceController.swift */; };
+		0B0329121AF5330400C875C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B0329111AF5330400C875C5 /* Images.xcassets */; };
+		0B0329161AF5330400C875C5 /* DesafioGit WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 0B0329151AF5330400C875C5 /* DesafioGit WatchKit App.app */; };
+		0B03291E1AF5330400C875C5 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B03291C1AF5330400C875C5 /* Interface.storyboard */; };
+		0B0329201AF5330400C875C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B03291F1AF5330400C875C5 /* Images.xcassets */; };
+		0B0329231AF5330400C875C5 /* DesafioGit WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0B03290B1AF5330400C875C5 /* DesafioGit WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0B03292E1AF5368D00C875C5 /* DetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B03292D1AF5368D00C875C5 /* DetailInterfaceController.swift */; };
+		0B0329301AF536AD00C875C5 /* TextRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B03292F1AF536AD00C875C5 /* TextRowType.swift */; };
 		3E9FD05B1AF0FD3E00C7862A /* RepositoriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9FD05A1AF0FD3E00C7862A /* RepositoriesManager.swift */; };
 		3E9FD05F1AF0FE0E00C7862A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9FD05E1AF0FE0E00C7862A /* Repository.swift */; };
 		3E9FD0631AF0FE4100C7862A /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9FD0621AF0FE4100C7862A /* Label.swift */; };
@@ -26,6 +34,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0B0329171AF5330400C875C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC9D6BB51AEFA8A800B6250D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B0329141AF5330400C875C5;
+			remoteInfo = "DesafioGit WatchKit App";
+		};
+		0B0329211AF5330400C875C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC9D6BB51AEFA8A800B6250D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B03290A1AF5330400C875C5;
+			remoteInfo = "DesafioGit WatchKit Extension";
+		};
 		EC9D6BD61AEFA8A800B6250D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EC9D6BB51AEFA8A800B6250D /* Project object */;
@@ -35,7 +57,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0B03292A1AF5330400C875C5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0B0329231AF5330400C875C5 /* DesafioGit WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0B03290B1AF5330400C875C5 /* DesafioGit WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DesafioGit WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B03290E1AF5330400C875C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B03290F1AF5330400C875C5 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		0B0329111AF5330400C875C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0B0329151AF5330400C875C5 /* DesafioGit WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DesafioGit WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B03291B1AF5330400C875C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B03291D1AF5330400C875C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		0B03291F1AF5330400C875C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0B03292C1AF5348C00C875C5 /* DesafioGit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DesafioGit.entitlements; sourceTree = "<group>"; };
+		0B03292D1AF5368D00C875C5 /* DetailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInterfaceController.swift; sourceTree = "<group>"; };
+		0B03292F1AF536AD00C875C5 /* TextRowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextRowType.swift; sourceTree = "<group>"; };
 		3E9FD05A1AF0FD3E00C7862A /* RepositoriesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesManager.swift; sourceTree = "<group>"; };
 		3E9FD05E1AF0FE0E00C7862A /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		3E9FD0621AF0FE4100C7862A /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
@@ -59,6 +106,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0B0329081AF5330400C875C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EC9D6BBA1AEFA8A800B6250D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -76,6 +130,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B03290C1AF5330400C875C5 /* DesafioGit WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0B03290F1AF5330400C875C5 /* InterfaceController.swift */,
+				0B03292D1AF5368D00C875C5 /* DetailInterfaceController.swift */,
+				0B03292F1AF536AD00C875C5 /* TextRowType.swift */,
+				0B0329111AF5330400C875C5 /* Images.xcassets */,
+				0B03290D1AF5330400C875C5 /* Supporting Files */,
+			);
+			path = "DesafioGit WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		0B03290D1AF5330400C875C5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B03290E1AF5330400C875C5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0B0329191AF5330400C875C5 /* DesafioGit WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				0B03291C1AF5330400C875C5 /* Interface.storyboard */,
+				0B03291F1AF5330400C875C5 /* Images.xcassets */,
+				0B03291A1AF5330400C875C5 /* Supporting Files */,
+			);
+			path = "DesafioGit WatchKit App";
+			sourceTree = "<group>";
+		};
+		0B03291A1AF5330400C875C5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B03291B1AF5330400C875C5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0B03292B1AF5332900C875C5 /* WatchKit */ = {
+			isa = PBXGroup;
+			children = (
+				0B03290C1AF5330400C875C5 /* DesafioGit WatchKit Extension */,
+				0B0329191AF5330400C875C5 /* DesafioGit WatchKit App */,
+			);
+			name = WatchKit;
+			sourceTree = "<group>";
+		};
 		3E9FD0591AF0FD2000C7862A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +204,7 @@
 				3E9FD05D1AF0FE0000C7862A /* Entities */,
 				3E9FD0591AF0FD2000C7862A /* Managers */,
 				EC9D6BBF1AEFA8A800B6250D /* DesafioGit */,
+				0B03292B1AF5332900C875C5 /* WatchKit */,
 				EC9D6BD81AEFA8A800B6250D /* DesafioGitTests */,
 				EC9D6BBE1AEFA8A800B6250D /* Products */,
 			);
@@ -113,6 +215,8 @@
 			children = (
 				EC9D6BBD1AEFA8A800B6250D /* DesafioGit.app */,
 				EC9D6BD51AEFA8A800B6250D /* DesafioGitTests.xctest */,
+				0B03290B1AF5330400C875C5 /* DesafioGit WatchKit Extension.appex */,
+				0B0329151AF5330400C875C5 /* DesafioGit WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,6 +224,7 @@
 		EC9D6BBF1AEFA8A800B6250D /* DesafioGit */ = {
 			isa = PBXGroup;
 			children = (
+				0B03292C1AF5348C00C875C5 /* DesafioGit.entitlements */,
 				EC9D6BC21AEFA8A800B6250D /* AppDelegate.swift */,
 				EC9D6BC91AEFA8A800B6250D /* Main.storyboard */,
 				EC9D6BCC1AEFA8A800B6250D /* Images.xcassets */,
@@ -161,6 +266,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0B03290A1AF5330400C875C5 /* DesafioGit WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B0329291AF5330400C875C5 /* Build configuration list for PBXNativeTarget "DesafioGit WatchKit Extension" */;
+			buildPhases = (
+				0B0329071AF5330400C875C5 /* Sources */,
+				0B0329081AF5330400C875C5 /* Frameworks */,
+				0B0329091AF5330400C875C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B0329181AF5330400C875C5 /* PBXTargetDependency */,
+			);
+			name = "DesafioGit WatchKit Extension";
+			productName = "DesafioGit WatchKit Extension";
+			productReference = 0B03290B1AF5330400C875C5 /* DesafioGit WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		0B0329141AF5330400C875C5 /* DesafioGit WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B0329281AF5330400C875C5 /* Build configuration list for PBXNativeTarget "DesafioGit WatchKit App" */;
+			buildPhases = (
+				0B0329131AF5330400C875C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DesafioGit WatchKit App";
+			productName = "DesafioGit WatchKit App";
+			productReference = 0B0329151AF5330400C875C5 /* DesafioGit WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		EC9D6BBC1AEFA8A800B6250D /* DesafioGit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC9D6BDF1AEFA8A800B6250D /* Build configuration list for PBXNativeTarget "DesafioGit" */;
@@ -168,10 +306,12 @@
 				EC9D6BB91AEFA8A800B6250D /* Sources */,
 				EC9D6BBA1AEFA8A800B6250D /* Frameworks */,
 				EC9D6BBB1AEFA8A800B6250D /* Resources */,
+				0B03292A1AF5330400C875C5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0B0329221AF5330400C875C5 /* PBXTargetDependency */,
 			);
 			name = DesafioGit;
 			productName = DesafioGit;
@@ -205,8 +345,20 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Kaique Damato";
 				TargetAttributes = {
+					0B03290A1AF5330400C875C5 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					0B0329141AF5330400C875C5 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
 					EC9D6BBC1AEFA8A800B6250D = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 3MHAVKD8BS;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					EC9D6BD41AEFA8A800B6250D = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -229,11 +381,31 @@
 			targets = (
 				EC9D6BBC1AEFA8A800B6250D /* DesafioGit */,
 				EC9D6BD41AEFA8A800B6250D /* DesafioGitTests */,
+				0B03290A1AF5330400C875C5 /* DesafioGit WatchKit Extension */,
+				0B0329141AF5330400C875C5 /* DesafioGit WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0B0329091AF5330400C875C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B0329121AF5330400C875C5 /* Images.xcassets in Resources */,
+				0B0329161AF5330400C875C5 /* DesafioGit WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B0329131AF5330400C875C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B03291E1AF5330400C875C5 /* Interface.storyboard in Resources */,
+				0B0329201AF5330400C875C5 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EC9D6BBB1AEFA8A800B6250D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,6 +426,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0B0329071AF5330400C875C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B0329301AF536AD00C875C5 /* TextRowType.swift in Sources */,
+				0B03292E1AF5368D00C875C5 /* DetailInterfaceController.swift in Sources */,
+				0B0329101AF5330400C875C5 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EC9D6BB91AEFA8A800B6250D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -284,6 +466,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0B0329181AF5330400C875C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B0329141AF5330400C875C5 /* DesafioGit WatchKit App */;
+			targetProxy = 0B0329171AF5330400C875C5 /* PBXContainerItemProxy */;
+		};
+		0B0329221AF5330400C875C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B03290A1AF5330400C875C5 /* DesafioGit WatchKit Extension */;
+			targetProxy = 0B0329211AF5330400C875C5 /* PBXContainerItemProxy */;
+		};
 		EC9D6BD71AEFA8A800B6250D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EC9D6BBC1AEFA8A800B6250D /* DesafioGit */;
@@ -292,6 +484,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0B03291C1AF5330400C875C5 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B03291D1AF5330400C875C5 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		EC9D6BC91AEFA8A800B6250D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -311,6 +511,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0B0329241AF5330400C875C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DesafioGit WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0B0329251AF5330400C875C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "DesafioGit WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		0B0329261AF5330400C875C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = DesafioGit_WatchKit_Extension;
+				INFOPLIST_FILE = "DesafioGit WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		0B0329271AF5330400C875C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = DesafioGit_WatchKit_Extension;
+				INFOPLIST_FILE = "DesafioGit WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		EC9D6BDD1AEFA8A800B6250D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -398,9 +654,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DesafioGit/DesafioGit.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DesafioGit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -408,9 +668,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DesafioGit/DesafioGit.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DesafioGit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -451,6 +715,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0B0329281AF5330400C875C5 /* Build configuration list for PBXNativeTarget "DesafioGit WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B0329261AF5330400C875C5 /* Debug */,
+				0B0329271AF5330400C875C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0B0329291AF5330400C875C5 /* Build configuration list for PBXNativeTarget "DesafioGit WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B0329241AF5330400C875C5 /* Debug */,
+				0B0329251AF5330400C875C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		EC9D6BB81AEFA8A800B6250D /* Build configuration list for PBXProject "DesafioGit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

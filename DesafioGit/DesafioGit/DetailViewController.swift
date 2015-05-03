@@ -10,19 +10,32 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    
+    // MARK: - Properties and Outlets
+    //================================================================================
+    var repositoryName = ""
+    
     @IBOutlet weak var nomeText: UILabel!
+    //================================================================================
     
-    override func viewDidLoad() {
+    
+    
+    // MARK: - VC's Life Cycle
+    //================================================================================
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
+        self.navigationItem.title = repositoryName
         
-        
+        nomeText.text = repositoryName
     }
     
-    override func didReceiveMemoryWarning() {
+    
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    //================================================================================
 
 }

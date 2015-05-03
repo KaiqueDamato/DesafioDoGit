@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="DesafioGit_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="xUy-fO-0do">
+                            <items>
+                                <tableRow identifier="cell" id="cjo-lg-ABD" customClass="TextRowType" customModule="DesafioGit_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="3uI-x4-aYr">
+                                        <items>
+                                            <label width="1" alignment="left" verticalAlignment="center" text="Label" textAlignment="center" numberOfLines="0" id="1eQ-HT-4gF"/>
+                                        </items>
+                                        <connections>
+                                            <segue destination="7tD-5v-vCy" kind="push" identifier="detailSegue" id="GmA-77-P0O"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="rowRepository" destination="1eQ-HT-4gF" id="805-B1-t68"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="xUy-fO-0do" id="h9g-e6-1Y7"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="216" y="326"/>
+        </scene>
+        <!--Detail Interface Controller-->
+        <scene sceneID="rht-YP-RYX">
+            <objects>
+                <controller id="7tD-5v-vCy" customClass="DetailInterfaceController" customModule="DesafioGit_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Label" textAlignment="center" numberOfLines="0" id="zaZ-fe-ygX"/>
+                        <label width="1" alignment="left" verticalAlignment="center" text="Label" textAlignment="center" numberOfLines="0" id="ASS-ik-iHT"/>
+                    </items>
+                    <connections>
+                        <outlet property="lblDetail" destination="ASS-ik-iHT" id="edl-Te-W3s"/>
+                        <outlet property="lblRepository" destination="zaZ-fe-ygX" id="ymS-Pd-uHB"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="428" y="326"/>
+        </scene>
+    </scenes>
+</document>

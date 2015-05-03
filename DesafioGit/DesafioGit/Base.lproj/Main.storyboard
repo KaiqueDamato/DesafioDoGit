@@ -37,6 +37,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="gYi-ty-4pL"/>
+                    <connections>
+                        <outlet property="tableView" destination="Nni-6G-w28" id="3ek-Sa-QI2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m8O-mx-T3m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,7 +106,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g1Z-Kn-igg">
-                                <rect key="frame" x="208" y="285" width="185" height="30"/>
+                                <rect key="frame" x="208" y="334" width="185" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="185" id="Yc7-Sg-lEH"/>
                                     <constraint firstAttribute="height" constant="30" id="ni2-s5-A9H"/>
@@ -115,7 +118,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4P-9m-NXe">
-                                <rect key="frame" x="279" y="348" width="42" height="30"/>
+                                <rect key="frame" x="279" y="397" width="42" height="30"/>
                                 <state key="normal" title="Entrar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -124,7 +127,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g1S-5G-dbM">
-                                <rect key="frame" x="208" y="247" width="185" height="30"/>
+                                <rect key="frame" x="208" y="296" width="185" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="185" id="Wl1-gC-0P6"/>
                                     <constraint firstAttribute="height" constant="30" id="km5-Tr-qjo"/>
@@ -132,15 +135,34 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gitHubLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Uj2-c8-Wjq">
+                                <rect key="frame" x="225" y="38" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Tvj-qG-QDK"/>
+                                    <constraint firstAttribute="height" constant="150" id="xib-zQ-aQh"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gitHubName" translatesAutoresizingMaskIntoConstraints="NO" id="ZjS-30-RE5">
+                                <rect key="frame" x="235" y="202" width="130" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="aJu-gd-hA8"/>
+                                    <constraint firstAttribute="height" constant="50" id="gPm-8b-cv4"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="g1S-5G-dbM" secondAttribute="centerY" constant="38" id="EvY-zG-tc8"/>
-                            <constraint firstItem="g1Z-Kn-igg" firstAttribute="centerX" secondItem="i4P-9m-NXe" secondAttribute="centerX" constant="0.5" id="Gqz-Wy-dSC"/>
-                            <constraint firstAttribute="centerX" secondItem="g1S-5G-dbM" secondAttribute="centerX" constant="-0.5" id="MEK-kO-q6T"/>
+                            <constraint firstAttribute="centerX" secondItem="Uj2-c8-Wjq" secondAttribute="centerX" id="1x6-Xw-tLI"/>
+                            <constraint firstAttribute="centerY" secondItem="g1S-5G-dbM" secondAttribute="centerY" constant="-11" id="HPg-Yw-Arf"/>
+                            <constraint firstAttribute="centerY" secondItem="Uj2-c8-Wjq" secondAttribute="centerY" constant="187" id="OE2-q3-irq"/>
+                            <constraint firstAttribute="centerX" secondItem="i4P-9m-NXe" secondAttribute="centerX" id="OsL-Bj-Zq6"/>
+                            <constraint firstAttribute="centerX" secondItem="g1S-5G-dbM" secondAttribute="centerX" id="QFN-Ab-me6"/>
+                            <constraint firstAttribute="centerY" secondItem="ZjS-30-RE5" secondAttribute="centerY" constant="73" id="Vhb-9h-B4F"/>
+                            <constraint firstAttribute="centerX" secondItem="g1Z-Kn-igg" secondAttribute="centerX" id="fFD-VT-3j2"/>
                             <constraint firstAttribute="centerX" secondItem="g1Z-Kn-igg" secondAttribute="centerX" constant="-0.5" id="h6C-zb-2Hh"/>
-                            <constraint firstAttribute="centerY" secondItem="g1Z-Kn-igg" secondAttribute="centerY" id="s8d-O5-emN"/>
-                            <constraint firstAttribute="centerY" secondItem="i4P-9m-NXe" secondAttribute="centerY" constant="-63" id="sXe-Cm-zn2"/>
+                            <constraint firstAttribute="centerY" secondItem="i4P-9m-NXe" secondAttribute="centerY" constant="-112" id="lau-0k-Tfd"/>
+                            <constraint firstAttribute="centerY" secondItem="g1Z-Kn-igg" secondAttribute="centerY" constant="-49" id="o8t-vc-dJO"/>
+                            <constraint firstAttribute="centerX" secondItem="ZjS-30-RE5" secondAttribute="centerX" id="wE1-Mr-0Yj"/>
                         </constraints>
                     </view>
                     <connections>
@@ -154,4 +176,8 @@
             <point key="canvasLocation" x="-716" y="352"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gitHubLogo" width="256" height="256"/>
+        <image name="gitHubName" width="128" height="45"/>
+    </resources>
 </document>

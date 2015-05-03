@@ -12,6 +12,7 @@ public class GitManager {
     static let sharedInstance:GitManager = GitManager()
     let request = RequestAuthorization()
     var mackmobileProjects = [NSDictionary]()
+    var numbers = [NSNumber]()
 
     private init(){}
     
@@ -104,22 +105,23 @@ public class GitManager {
                 
                 if httpResponse.statusCode == 200 {
                     var data = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as! [NSDictionary]
-                    
-                    var numbers = self.searchForNumberProjects(data)
+                    var numbers = self.searchForNumberProjects(username, projects: data)
                 }
             }
         }
     }
     
-    private func searchForNumberProjects(projects: [NSDictionary]) -> [String] {
+    private func searchForNumberProjects(username: String, projects: [NSDictionary]) -> [NSNumber] {
         var index = 0
-        var pullsNames = [String]()
         
         for index; index < projects.count; index++ {
-            pullsNames.append(projects[index].objectForKey("user")?.objectForKey("login") as! String)
+            var pullName = projects[index].objectForKey("user")?.objectForKey("login") as! String
             
-            println("\n", projects[index].objectForKey("user")?.objectForKey("login") as! String)
+            if pullName == username {
+                numbers.append(projects[index].objectForKey("number") as! NSNumber)
+                println(numbers)
+            }
         }
-        return pullsNames
+        return numbers
     }
 }

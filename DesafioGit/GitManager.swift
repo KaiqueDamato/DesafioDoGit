@@ -67,7 +67,7 @@ public class GitManager {
                         var searchResultTest: NSDictionary? = searchResult.objectForKey("parent") as? NSDictionary
                         
                         if (searchResultTest?.count != nil) {
-                           self.getParentDictionary(searchResult)
+                            self.getParentDictionary(username, password: password, project: searchResult)
                         }
                     }
                 }
@@ -75,7 +75,7 @@ public class GitManager {
         }
     }
     
-    private func getParentDictionary(project: NSDictionary) {
+    private func getParentDictionary(username: String, password: String, project: NSDictionary) {
         var index = 0
         var key = String()
         
@@ -84,7 +84,42 @@ public class GitManager {
         key = dictionary.objectForKey("login") as! String
         
         if (key == "mackmobile") {
+            key = project.objectForKey("name") as! String
             mackmobileProjects.append(project)
+            self.searchAllPullRequests(username, password: password, key: key)
         }
+    }
+    
+    private func searchAllPullRequests(username: String, password: String, key: String) {
+        var index = 0
+        var searchResult = NSDictionary()
+        
+        var url = request.getRequest("https://api.github.com/repos/mackmobile/\(key)/pulls?page=1&per_page=100", username: username, password: password)
+        
+        NSURLConnection.sendAsynchronousRequest(url, queue: NSOperationQueue.mainQueue()) { (response, data, error) in
+            var error = NSError?()
+            
+            if response != nil {
+                let httpResponse = response as! NSHTTPURLResponse
+                
+                if httpResponse.statusCode == 200 {
+                    var data = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as! [NSDictionary]
+                    
+                    var numbers = self.searchForNumberProjects(data)
+                }
+            }
+        }
+    }
+    
+    private func searchForNumberProjects(projects: [NSDictionary]) -> [String] {
+        var index = 0
+        var pullsNames = [String]()
+        
+        for index; index < projects.count; index++ {
+            pullsNames.append(projects[index].objectForKey("user")?.objectForKey("login") as! String)
+            
+            println("\n", projects[index].objectForKey("user")?.objectForKey("login") as! String)
+        }
+        return pullsNames
     }
 }

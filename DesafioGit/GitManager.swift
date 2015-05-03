@@ -12,7 +12,7 @@ public class GitManager {
     static let sharedInstance:GitManager = GitManager()
     let request = RequestAuthorization()
     var mackmobileProjects = [NSDictionary]()
-    var numbers = [NSNumber]()
+//    var numbers = [NSNumber]()
 
     private init(){}
     
@@ -93,7 +93,7 @@ public class GitManager {
     
     private func searchAllPullRequests(username: String, password: String, key: String) {
         var index = 0
-        var searchResult = NSDictionary()
+//        var searchResult = NSDictionary()
         
         var url = request.getRequest("https://api.github.com/repos/mackmobile/\(key)/pulls?page=1&per_page=100", username: username, password: password)
         
@@ -105,23 +105,46 @@ public class GitManager {
                 
                 if httpResponse.statusCode == 200 {
                     var data = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as! [NSDictionary]
-                    var numbers = self.searchForNumberProjects(username, projects: data)
+                    var number = self.searchForNumberProjects(username, projects: data)
+                    var labels = self.getLabelsFromPullRequest(username, password: password, project: key, number: number)
                 }
             }
         }
     }
     
-    private func searchForNumberProjects(username: String, projects: [NSDictionary]) -> [NSNumber] {
+    private func searchForNumberProjects(username: String, projects: [NSDictionary]) -> NSNumber {
         var index = 0
+        var number = NSNumber()
         
         for index; index < projects.count; index++ {
             var pullName = projects[index].objectForKey("user")?.objectForKey("login") as! String
             
             if pullName == username {
-                numbers.append(projects[index].objectForKey("number") as! NSNumber)
-                println(numbers)
+                number = projects[index].objectForKey("number") as! NSNumber
             }
         }
-        return numbers
+        return number
+    }
+    
+    private func getLabelsFromPullRequest(username: String, password: String, project: String, number: NSNumber) -> [String] {
+        var labels = [NSDictionary]()
+        var code = number.integerValue
+        var url = request.getRequest("https://api.github.com/repos/mackmobile/\(project)/issues/\(code)", username: username, password: password)
+        
+        NSURLConnection.sendAsynchronousRequest(url, queue: NSOperationQueue.mainQueue()) { (response, data, error) in
+            var error = NSError?()
+            
+            if response != nil {
+                let httpResponse = response as! NSHTTPURLResponse
+                
+                if httpResponse.statusCode == 200 {
+                    var data = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSDictionary
+                    labels = data.objectForKey("labels") as! [NSDictionary]
+                    println(labels)
+                }
+            }
+        }
+        
+        return [String]()
     }
 }

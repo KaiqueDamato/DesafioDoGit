@@ -20,11 +20,11 @@ public class RepositoriesManager {
     
     private init(){}
     
-    func newRepository()->Repository{
+    func newRepository() -> Repository {
         return NSEntityDescription.insertNewObjectForEntityForName(RepositoriesManager.entityName, inManagedObjectContext: managedContext) as! Repository
     }
     
-    func saveRepository(){
+    func saveRepository() {
         var error:NSError?
         managedContext.save(&error)
         
@@ -33,7 +33,7 @@ public class RepositoriesManager {
         }
     }
     
-    func findRepositories()->Array<Repository>{
+    func findRepositories() -> [Repository] {
         let fetchRequest = NSFetchRequest(entityName: RepositoriesManager.entityName)
         var error:NSError?
         
@@ -48,7 +48,7 @@ public class RepositoriesManager {
         NSFetchRequest(entityName: "FetchRequest")
         
         
-        return Array<Repository>()
+        return [Repository]()
     }
     
     func verifyData(projectName: String) -> Bool {

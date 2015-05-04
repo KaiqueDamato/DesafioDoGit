@@ -30,7 +30,6 @@ class RepositoryTableViewController: UITableViewController, UITableViewDataSourc
         
         var notification = NSNotificationCenter.defaultCenter()
         notification.addObserver(self, selector: Selector("loaded"), name: "Pesquisa Terminada", object: nil)
-        
     }
     
     func loaded() {

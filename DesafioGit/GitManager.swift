@@ -87,7 +87,7 @@ public class GitManager {
         key = dictionary.objectForKey("login") as! String
         key2 = project.objectForKey("name") as! String
         
-        if (key == "mackmobile") {
+        if (key == "mackmobile" && repository.verifyData(key2)) {
             RepositoryFactory.addRepository(key2)
             self.notification.postNotificationName("Pesquisa Terminada", object: self, userInfo: nil)
 //            mackmobileProjects.append(project)

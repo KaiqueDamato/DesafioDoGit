@@ -88,9 +88,9 @@ public class GitManager {
         key2 = project.objectForKey("name") as! String
         
         if (key == "mackmobile" && repository.verifyData(key2)) {
-            RepositoryFactory.addRepository(key)
+            RepositoryFactory.addRepository(key2)
 //            mackmobileProjects.append(project)
-            self.searchAllPullRequests(username, password: password, key: key)
+            self.searchAllPullRequests(username, password: password, key: key2)
         }
     }
     

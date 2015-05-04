@@ -13,13 +13,13 @@ class RepositoryTableViewController: UITableViewController, UITableViewDataSourc
     
     // MARK: - Properties
     //================================================================================
-    lazy var repositories:Array<Repository> =
-    {
-        return RepositoriesManager.sharedInstance.findRepositories()
-    }()
-    //================================================================================
+//    lazy var repositories:Array<Repository> =
+//    {
+//        return RepositoriesManager.sharedInstance.findRepositories()
+//    }()
     
-    @IBOutlet weak var loading: UIActivityIndicatorView!
+    var repositories = RepositoriesManager.sharedInstance.findRepositories()
+    //================================================================================
     
     
     // MARK: - VC's Life Cycle
@@ -30,6 +30,7 @@ class RepositoryTableViewController: UITableViewController, UITableViewDataSourc
         
         var notification = NSNotificationCenter.defaultCenter()
         notification.addObserver(self, selector: Selector("loaded"), name: "Pesquisa Terminada", object: nil)
+        
     }
     
     func loaded() {
@@ -39,7 +40,6 @@ class RepositoryTableViewController: UITableViewController, UITableViewDataSourc
     override func viewWillAppear(animated: Bool)
     {
         self.navigationItem.title = "GitHub"
-        repositories = RepositoriesManager.sharedInstance.findRepositories()
         self.tableView.reloadData()
     }
     //================================================================================
@@ -62,12 +62,14 @@ class RepositoryTableViewController: UITableViewController, UITableViewDataSourc
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
+        repositories = RepositoriesManager.sharedInstance.findRepositories()
         return repositories.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
+        repositories = RepositoriesManager.sharedInstance.findRepositories()
         let item:Repository = repositories[indexPath.row]
         
         let cell = tableView.dequeueReusableCellWithIdentifier("showDetail", forIndexPath: indexPath) as! UITableViewCell

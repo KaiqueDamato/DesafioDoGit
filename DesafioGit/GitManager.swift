@@ -87,8 +87,9 @@ public class GitManager {
         key = dictionary.objectForKey("login") as! String
         key2 = project.objectForKey("name") as! String
         
-        if (key == "mackmobile" && repository.verifyData(key2)) {
+        if (key == "mackmobile") {
             RepositoryFactory.addRepository(key2)
+            self.notification.postNotificationName("Pesquisa Terminada", object: self, userInfo: nil)
 //            mackmobileProjects.append(project)
             self.searchAllPullRequests(username, password: password, key: key2)
         }
@@ -146,7 +147,6 @@ public class GitManager {
                 }
             }
         }
-        notification.postNotificationName("Pesquisa Terminada", object: self, userInfo: nil)
         return [String]()
     }
 }

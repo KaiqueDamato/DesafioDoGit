@@ -33,6 +33,8 @@
 		ECDEDC781AF6D7EB007966B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEDC751AF6D7EB007966B0 /* User.swift */; };
 		ECDEDC7A1AF6DE1B007966B0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ECDEDC791AF6DE1B007966B0 /* Settings.bundle */; };
 		ECDEDC7C1AF6E397007966B0 /* RepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEDC7B1AF6E397007966B0 /* RepositoryFactory.swift */; };
+		ECDEDC7E1AF70E64007966B0 /* UserFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEDC7D1AF70E64007966B0 /* UserFactory.swift */; };
+		ECDEDC801AF727AA007966B0 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEDC7F1AF727AA007966B0 /* LaunchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		ECDEDC751AF6D7EB007966B0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ECDEDC791AF6DE1B007966B0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		ECDEDC7B1AF6E397007966B0 /* RepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryFactory.swift; sourceTree = "<group>"; };
+		ECDEDC7D1AF70E64007966B0 /* UserFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFactory.swift; sourceTree = "<group>"; };
+		ECDEDC7F1AF727AA007966B0 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,7 @@
 				3E9FD0681AF0FF9700C7862A /* LabelsManager.swift */,
 				EC70FE9E1AF11B110055345D /* GitManager.swift */,
 				ECDEDC7B1AF6E397007966B0 /* RepositoryFactory.swift */,
+				ECDEDC7D1AF70E64007966B0 /* UserFactory.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 				ECAFD6A51AF24CBC00C01BC9 /* RepositoryTableViewController.swift */,
 				3E9FD06E1AF106D800C7862A /* DetailViewController.swift */,
 				EC70FEA01AF14DF80055345D /* RequestAuthorization.swift */,
+				ECDEDC7F1AF727AA007966B0 /* LaunchViewController.swift */,
 				EC9D6BC91AEFA8A800B6250D /* Main.storyboard */,
 				EC9D6BC01AEFA8A800B6250D /* Supporting Files */,
 			);
@@ -448,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E9FD06F1AF106D800C7862A /* DetailViewController.swift in Sources */,
+				ECDEDC801AF727AA007966B0 /* LaunchViewController.swift in Sources */,
 				EC8C62061AF15AE3007E4D49 /* LoginViewController.swift in Sources */,
 				EC9D6BC61AEFA8A800B6250D /* DesafioGit.xcdatamodeld in Sources */,
 				3E9FD0691AF0FF9700C7862A /* LabelsManager.swift in Sources */,
@@ -456,6 +463,7 @@
 				3E9FD05B1AF0FD3E00C7862A /* RepositoriesManager.swift in Sources */,
 				EC70FE9F1AF11B110055345D /* GitManager.swift in Sources */,
 				ECDEDC781AF6D7EB007966B0 /* User.swift in Sources */,
+				ECDEDC7E1AF70E64007966B0 /* UserFactory.swift in Sources */,
 				ECDEDC761AF6D7EB007966B0 /* Repository.swift in Sources */,
 				ECAFD6A61AF24CBC00C01BC9 /* RepositoryTableViewController.swift in Sources */,
 				EC70FEA11AF14DF80055345D /* RequestAuthorization.swift in Sources */,

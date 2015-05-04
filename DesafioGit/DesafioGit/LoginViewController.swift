@@ -30,6 +30,7 @@ class TesteViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
     }
 
     override func didReceiveMemoryWarning()
@@ -51,6 +52,8 @@ class TesteViewController: UIViewController {
             
             if success
             {
+                
+                UserFactory.createUser(username, password: password)
                 self.performSegueWithIdentifier("showResults", sender: nil)
             }
             else

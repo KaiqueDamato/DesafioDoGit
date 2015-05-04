@@ -13,12 +13,7 @@ import CoreData
 class Repository: NSManagedObject {
 
     @NSManaged var name: String
-    @NSManaged var labels: NSMutableSet
+    @NSManaged var labels: Label
     @NSManaged var users: User
-    
-    func addLabel(label: Label) {
-        labels.addObject(label)
-        label.repositories = self
-    }
 
 }

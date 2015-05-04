@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="suP-vR-7mH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BgW-uk-6UL">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
@@ -84,6 +84,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOi-NT-a6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="60" y="352"/>
+        </scene>
+        <!--Launch View Controller-->
+        <scene sceneID="UJb-HU-TTS">
+            <objects>
+                <viewController id="BgW-uk-6UL" customClass="LaunchViewController" customModule="DesafioGit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SsG-IW-SkX"/>
+                        <viewControllerLayoutGuide type="bottom" id="mjY-Lk-bGv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x2n-t5-fAx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gitHubLogo" translatesAutoresizingMaskIntoConstraints="NO" id="7cg-Qa-xoB">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="AjT-sV-tYY"/>
+                                    <constraint firstAttribute="height" constant="200" id="lX0-4k-AM5"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="7cg-Qa-xoB" secondAttribute="centerY" id="Kmk-JY-2BX"/>
+                            <constraint firstAttribute="centerX" secondItem="7cg-Qa-xoB" secondAttribute="centerX" id="ruu-tB-y4i"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="suP-vR-7mH" kind="presentation" identifier="showLogin" modalTransitionStyle="crossDissolve" id="qFM-5R-4DZ"/>
+                        <segue destination="ZDv-PS-493" kind="presentation" identifier="showResults2" modalTransitionStyle="crossDissolve" id="jAS-OL-QeD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t8a-oO-e3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-716" y="1067"/>
         </scene>
         <!--Teste View Controller-->
         <scene sceneID="1Gt-1S-omL">
@@ -172,4 +207,7 @@
         <image name="gitHubLogo" width="256" height="256"/>
         <image name="gitHubName" width="128" height="45"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="jAS-OL-QeD"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -19,6 +19,7 @@ class RepositoryTableViewController: UITableViewController, UITableViewDataSourc
     }()
     //================================================================================
     
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     
     
     // MARK: - VC's Life Cycle
@@ -26,6 +27,13 @@ class RepositoryTableViewController: UITableViewController, UITableViewDataSourc
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        var notification = NSNotificationCenter.defaultCenter()
+        notification.addObserver(self, selector: Selector("loaded"), name: "Pesquisa Terminada", object: nil)
+    }
+    
+    func loaded() {
+        self.tableView.reloadData()
     }
     
     override func viewWillAppear(animated: Bool)

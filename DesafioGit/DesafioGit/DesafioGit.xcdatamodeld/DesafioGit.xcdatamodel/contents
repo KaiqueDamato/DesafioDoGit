@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Label" syncable="YES">
+    <entity name="Label" representedClassName="Label" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="repositories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Repository" inverseName="labels" inverseEntity="Repository" syncable="YES"/>
     </entity>
-    <entity name="Repository" syncable="YES">
+    <entity name="Repository" representedClassName="Repository" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="labels" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Label" inverseName="repositories" inverseEntity="Label" syncable="YES"/>
+        <relationship name="labels" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Label" inverseName="repositories" inverseEntity="Label" syncable="YES"/>
         <relationship name="users" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="repositories" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="User" syncable="YES">
+    <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="login" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="repositories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Repository" inverseName="users" inverseEntity="Repository" syncable="YES"/>
+        <relationship name="repositories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Repository" inverseName="users" inverseEntity="Repository" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-279" positionY="-18" width="128" height="28"/>
-        <element name="Repository" positionX="-83" positionY="-90" width="128" height="28"/>
-        <element name="Label" positionX="79" positionY="-18" width="128" height="28"/>
+        <element name="Label" positionX="79" positionY="-18" width="128" height="73"/>
+        <element name="Repository" positionX="-110" positionY="-18" width="128" height="88"/>
+        <element name="User" positionX="-279" positionY="-18" width="128" height="88"/>
     </elements>
 </model>

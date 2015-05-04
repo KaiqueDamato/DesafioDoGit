@@ -50,4 +50,15 @@ public class RepositoriesManager {
         
         return Array<Repository>()
     }
+    
+    func verifyData(projectName: String) -> Bool {
+        var repositories = self.findRepositories()
+        
+        for teste in repositories {
+            if teste.name == projectName {
+                return false
+            }
+        }
+        return true
+    }
 }

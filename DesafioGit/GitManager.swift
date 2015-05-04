@@ -12,7 +12,8 @@ public class GitManager {
     static let sharedInstance:GitManager = GitManager()
     let request = RequestAuthorization()
     var mackmobileProjects = [NSDictionary]()
-//    var numbers = [NSNumber]()
+    var notification = NSNotificationCenter.defaultCenter()
+    var repository = RepositoriesManager.sharedInstance
 
     private init(){}
     
@@ -79,21 +80,22 @@ public class GitManager {
     private func getParentDictionary(username: String, password: String, project: NSDictionary) {
         var index = 0
         var key = String()
+        var key2 = String()
         
         var dictionary = ((project["parent"] as! NSDictionary)["owner"] as! NSDictionary)
         
         key = dictionary.objectForKey("login") as! String
+        key2 = project.objectForKey("name") as! String
         
-        if (key == "mackmobile") {
-            key = project.objectForKey("name") as! String
-            mackmobileProjects.append(project)
+        if (key == "mackmobile" && repository.verifyData(key2)) {
+            RepositoryFactory.addRepository(key)
+//            mackmobileProjects.append(project)
             self.searchAllPullRequests(username, password: password, key: key)
         }
     }
     
     private func searchAllPullRequests(username: String, password: String, key: String) {
         var index = 0
-//        var searchResult = NSDictionary()
         
         var url = request.getRequest("https://api.github.com/repos/mackmobile/\(key)/pulls?page=1&per_page=100", username: username, password: password)
         
@@ -144,7 +146,7 @@ public class GitManager {
                 }
             }
         }
-        
+        notification.postNotificationName("Pesquisa Terminada", object: self, userInfo: nil)
         return [String]()
     }
 }

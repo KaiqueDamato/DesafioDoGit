@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
         
         self.navigationItem.title = repositoryName
         
-        nomeText.text = repositoryName
+//        nomeText.text = repositoryName
     }
     
     

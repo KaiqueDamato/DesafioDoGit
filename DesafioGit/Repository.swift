@@ -1,9 +1,9 @@
 //
 //  Repository.swift
-//  DesafioGit
+//  
 //
-//  Created by Rafael Souza Belchior da Silva on 29/04/15.
-//  Copyright (c) 2015 Kaique Damato. All rights reserved.
+//  Created by Kaique Damato on 5/3/15.
+//
 //
 
 import Foundation
@@ -11,13 +11,14 @@ import CoreData
 
 @objc(Repository)
 class Repository: NSManagedObject {
-    
+
     @NSManaged var name: String
-    @NSManaged var user: User
-    @NSManaged var labels: NSSet
+    @NSManaged var labels: NSMutableSet
+    @NSManaged var users: User
     
-    func addLabel(label:Label) {
-        var labels = self.mutableSetValueForKey("labels")
+    func addLabel(label: Label) {
         labels.addObject(label)
+        label.repositories = self
     }
+
 }
